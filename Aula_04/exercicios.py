@@ -14,18 +14,13 @@ livro_02: Dict[str, Any] = {
     'ano': 2015
 }
 
-# transformando em uma lista é percorrendo cada linha do dicionario
-# lista_de_elementos: list = livro_01.items()
-# for elemento in lista_de_elementos:
-#     # print(elemento)
-
 # lista de dicionarios
 lista_de_livros: list = []
 lista_de_livros.append(livro_01)
 lista_de_livros.append(livro_02)
 # print(lista_de_livros)
 
-
+# Imprimindo cada elemento da lista
 for chave, valor in livro_01.items():
     print(f'{chave}: {valor}')
 
