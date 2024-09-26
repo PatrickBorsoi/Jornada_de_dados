@@ -7,10 +7,25 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
-flake8 = "^7.1.1"
+selenium = "^4.25.0"
+isort = "^5.13.2"
 black = "^24.8.0"
+flake8 = "^7.1.1"
+taskipy = "^1.13.0"
+pre-commit = "^3.8.0"
 
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+# estou dizendo para o isort que quem vai formatar o codigo e o black
+[tool.isort]
+profile = "black"
+
+[tool.taskipy.tasks]
+format = """
+isort teste.py
+black teste.py
+flake8 teste.py
+"""
